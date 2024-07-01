@@ -3,6 +3,7 @@ import supabase from "./supbase";
 import CategoryFilter from "./components/CategoryFilter";
 import Header from "./components/Header";
 import "./style.css";
+import Hfminfo from "./components/Hfminfo";
 
 const CATEGORIES = [
   { name: "technology", color: "#3b82f6" },
@@ -85,6 +86,7 @@ function App() {
 
   return (
     <div>
+      <Hfminfo />
       <Header showForm={showForm} setShowForm={setShowForm} />
       {showForm && (
         <NewFactForm setFactList={setFactList} setShowForm={setShowForm} />
